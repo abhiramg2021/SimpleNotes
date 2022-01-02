@@ -1,0 +1,137 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.container{
+  max-width: 1000px;
+  margin-right: auto;
+  margin-left: auto;
+  padding-left: 15px;
+  padding-right: 15px; /* Notes do not get pushed to the edge of the screen*/
+  min-height: 100vh
+}
+.notes-list{
+  display: grid;
+  grid-gap: 1rem;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); 
+  /*A column cannot be bigger than total width of page, but not smaller than 250 pixels*/
+}
+
+.note.new{
+  background-color: turquoise;
+
+}
+
+textarea{
+  font-family:  -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+  'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+  sans-serif;
+  font-size: medium;
+  border: none;
+  resize: none;
+  background-color: turquoise;
+}
+
+.save{
+  background-color: lightgray;
+  border: none;
+  border-radius: 15px;
+  padding: 5px 10px 5px 10px;
+  transition: .3s;
+}
+
+.save:hover{
+  background-color: white;
+  cursor: pointer;
+
+}
+
+
+
+textarea:focus{
+  outline: none;
+}
+
+.note{
+  background-color: bisque;
+  border-radius: 10px;
+  padding: 1rem; /* a unit that changes relative to font size, this seems a way better option to use*/
+  min-height: 250px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  white-space: pre-wrap; 
+  /* the above property just means keep any spacing that was added previously */
+}
+
+.header{
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.dark-mode{
+  background-color: rgb(47, 47, 47);
+  transition: .3s
+}
+
+.light-mode{
+  background-color: white;
+  transition: .3s
+}
+
+.light-mode h1{
+  color: black;
+  transition: .3s
+}
+
+.dark-mode h1{
+  color: white;
+  transition: .3s
+}
+
+.note-footer{
+  display: flex;
+  align-items: center; /*Align center of the the notes a lot better*/
+  justify-content: space-between;
+
+}
+
+.delete-icon{
+  cursor: pointer;
+  transition: .3s
+}
+
+.delete-icon:hover{
+  color:lightgrey
+}
+
+.search{
+  display: flex;
+  align-items: center;
+  background-color: lightgrey;
+  border-radius: 10px;
+  padding: 5px;
+  margin-bottom: 1.5em;
+}
+
+.search input{
+  background-color: lightgray;
+  border: none;
+  width: 100%;
+}
+
+.search input:focus{
+  outline: none;
+}
