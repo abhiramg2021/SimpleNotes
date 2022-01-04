@@ -1,5 +1,5 @@
 # Simple Notes
- This project is a simple notes app in which you can create new notes, delete old notes, and search for specific notes. You can also change from light mode to dark mode based on your preference. This was created using ReactJS.
+ This project is a simple notes app in which you can create new notes, delete old notes, and search for specific notes. Another cool feature is that you can resize individual notes to whatever size you would like. You can also change from light mode to dark mode based on your preference. This application was created using ReactJS.
 
 ## Run the following command in your terminal to view the app: 
 
